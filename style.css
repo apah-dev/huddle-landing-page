@@ -178,11 +178,14 @@ button:hover {
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 70rem;
   }
 
   nav {
     display: flex;
+    
   }
 
   .image-aside {
@@ -201,8 +204,15 @@ button:hover {
   }
 
   .text-aside {
-    max-width: 30%;
+    max-width: 35%;
     text-align: left;
     line-height: 2rem;
+  }
+
+  .icons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem;
+    padding-right: 3rem;
   }
 }
