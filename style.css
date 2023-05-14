@@ -1,0 +1,208 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --SoftMagenta: hsl(300, 69%, 71%);
+}
+/*
+1. Use a more-intuitive box-sizing model.
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+/*
+2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+3. Allow percentage-based heights in the application
+*/
+html,
+body {
+  height: 100%;
+}
+/*
+Typographic tweaks!
+4. Add accessible line-height
+5. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Open Sans", sans-serif;
+  background-image: url(images/bg-mobile.svg);
+  background-color: var(--Violet);
+}
+/*
+6. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+7. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+/*
+8. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+  color: white;
+}
+/*
+9. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  text-align: center;
+  gap: 3.5rem;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  color: white;
+  font-weight: 600;
+  font-size: 2em;
+  margin-bottom: 1rem;
+}
+
+nav .logo {
+  max-width: 20%;
+}
+
+.illustration {
+  width: 100%;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+button {
+  margin-top: 2rem;
+  padding: 0.5rem 4rem;
+  border-radius: 1.5rem;
+  border: none;
+  box-shadow: 0.2rem 0.2rem 0.5rem;
+  font-size: 0.95em;
+  color: var(--Violet);
+  font-family: "Poppins", sans-serif;
+}
+
+button:hover {
+  background-color: var(--SoftMagenta);
+  color: white;
+  transition: 0.2s;
+  cursor: pointer;
+  box-shadow: 0.2rem 0.2rem 0.5rem #333;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.icons .icon {
+  border: 1px solid white;
+  padding: 0.5rem;
+  border-radius: 50%;
+  color: white;
+}
+
+.icon:hover {
+  border: 1px solid #e882e8;
+  color: #e882e8;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.attribution {
+  margin-top: 1rem;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 58rem) {
+  body {
+    background-image: url(images/bg-desktop.svg);
+    background-color: var(--Violet);
+    display: grid;
+    place-content: center;
+  }
+  main {
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    gap: 3rem;
+    padding: 4rem;
+  }
+
+  section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav {
+    display: flex;
+  }
+
+  .image-aside {
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: flex-start;
+    max-width: 70%;
+  }
+
+  .logo {
+    width: 15%;
+  }
+
+  h1 {
+    line-height: 1.5em;
+  }
+
+  .text-aside {
+    max-width: 30%;
+    text-align: left;
+    line-height: 2rem;
+  }
+}
