@@ -117,6 +117,7 @@ button {
   border: none;
   box-shadow: 0.2rem 0.2rem 0.5rem;
   font-size: 0.95em;
+  background-color: white;
   color: var(--Violet);
   font-family: "Poppins", sans-serif;
 }
